@@ -23,7 +23,7 @@ Package.onUse(function(api) {
     'lib/notifications.js',
   ], 'server');
 
-  api.export(['OneSignal'], 'server');
+  api.export(['OneSignal', 'SentNotifications'], 'server');
 });
 
 Package.onTest(function(api) {
