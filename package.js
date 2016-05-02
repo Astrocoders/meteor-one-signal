@@ -22,6 +22,8 @@ Package.onUse(function(api) {
     'lib/one_signal.js',
     'lib/notifications.js',
   ], 'server');
+
+  api.export(['OneSignal'], 'server');
 });
 
 Package.onTest(function(api) {
