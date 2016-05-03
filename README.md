@@ -26,7 +26,7 @@ Ensure that you have a oneSignal entry in your settings.json:
 ### OneSignal.Notifications.create
 Usage:
 
-```
+```js
   const data = {
     contents: {
       en: 'Hey! Wazup? We miss you.',  
