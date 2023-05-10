@@ -10,7 +10,8 @@ $ meteor add astrocoders:one-signal
 
 ## Getting started
 
-Ensure that you have a oneSignal entry in your settings.json:
+Make sure to enter the following information from settings.json by default.
+You can also give `apiId` and `apiKey` values as options.
 
 ```json
 {
@@ -33,7 +34,15 @@ Usage:
     },
   };
 
-  OneSignal.Notifications.create([playersId], data);
+  const options = {
+    apiKey:'',
+    appId:'',
+  }
+
+  const oneSignal = new OneSignal() // By default it looks at Meteor.settings.oneSignal.
+  const oneSignal = new OneSignal(options)
+
+  oneSignal.notifications.create([playersId], data);
   // => returns OneSignal response.
 ```
 
